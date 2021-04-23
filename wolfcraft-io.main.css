@@ -1,20 +1,22 @@
-* {
+:root {
     --main-color: #B0C4DE;
+    --background-color: #333333;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #333333;
+    padding: 0;
+    margin: 0;
     color: var(--main-color);
-    height: 92vh;
-}
-
-.full-height-column {
+    background-color: var(--background-color);
+    height: 100vh;
     display: flex;
-    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 #wolfcraft-io {
@@ -34,13 +36,25 @@ svg path.wolf,
 svg path.photo,
 svg path.code,
 svg path.io,
-svg path.name {
+svg path.name{
     fill: var(--main-color);
     fill-rule: nonzero;
 }
 
-svg a:hover path {
-    fill: teal;
+svg path.shield {
+    fill: none;
+    stroke: var(--main-color);
+}
+
+svg path.info {
+    fill: var(--main-color);
+    fill-rule: unset;
+    opacity: 0.4;
+}
+
+svg a:hover path:not(.quadrant) {
+    stroke: var(--main-color);
+    stroke-width: 1px;
 }
 
 svg path.photo.quadrant,
@@ -48,7 +62,24 @@ svg path.code.quadrant {
     fill: transparent;
 }
 
-svg path.shield {
-    fill: none;
-    stroke: var(--main-color);
+#info-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 3rem;
+    margin: 1rem;
+}
+
+#info-button:hover path,
+#info-button.checked path {
+   opacity: 1;
+}
+
+#wolfcraft-io path {
+   transition: opacity 2s linear;
+}
+
+#info-button:hover + #wolfcraft-io path:not(.code):not(.photo),
+#info-button.checked + #wolfcraft-io path:not(.code):not(.photo) {
+   opacity: 0.2;
 }

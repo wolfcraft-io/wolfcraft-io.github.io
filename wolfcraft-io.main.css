@@ -70,7 +70,6 @@ svg path.code.quadrant {
     margin: 1rem;
 }
 
-#info-button:hover path,
 #info-button.checked path {
    opacity: 1;
 }
@@ -79,7 +78,6 @@ svg path.code.quadrant {
    transition: opacity 2s linear;
 }
 
-#info-button:hover + #wolfcraft-io path:not(.code):not(.photo),
 #info-button.checked + #wolfcraft-io path:not(.code):not(.photo) {
    opacity: 0.2;
 }

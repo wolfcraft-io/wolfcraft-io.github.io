@@ -69,7 +69,7 @@ svg path.code.quadrant {
 #info-button {
     position: fixed;
     bottom: 0;
-    right: 0;
+    left: 0;
     width: 3rem;
     margin: 1rem;
 }

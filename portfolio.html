@@ -14,8 +14,11 @@
   </head>
   <body>
     <script>
-        // redirect to root is meta-redirect does not excute
-        setTimeout(() => window.Location = '/', 5000);
+        // redirect to home if meta-redirect does not excute
+        setTimeout(() => {
+          console.log(`redirecting to home from '${window.Location.path}'`);
+          window.Location.href = '/', 5000
+        });
     </script>
   </body>
 </html>

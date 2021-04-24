@@ -15,10 +15,12 @@
   <body>
     <script>
         // redirect to home if meta-redirect does not excute
-        setTimeout(() => {
-          console.log(`redirecting to home from '${window.Location.path}'`);
-          window.Location.href = '/', 5000
-        });
+        setTimeout(
+            () => {
+                console.log(`redirecting to home from '${window.Location.path}'`);
+                window.Location.href = '/';
+            },
+            5000);
     </script>
   </body>
 </html>

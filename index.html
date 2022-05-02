@@ -84,6 +84,12 @@
     <script>
         const info = document.getElementById("info-button");
         info.addEventListener("click", _ => info.classList.toggle("checked"))
+
+        setTimeout(() => {
+            if(!info.classList.contains("checked")){
+                info.classList.add("checked");
+            }
+        }, 90000);
     </script>
   </body>
 </html>

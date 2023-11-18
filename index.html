@@ -86,7 +86,7 @@
         info.addEventListener("click", _ => info.classList.toggle("checked"));
 
         const autoInfoTriggerTimeOut = 25;
-        console.log(`set auto help trigger to ${autoInfoTriggerTimeOut}`);
+        console.log(`Set auto help trigger to ${autoInfoTriggerTimeOut} seconds.`);
         setTimeout(() => {
             if(!info.classList.contains("checked")){
                 info.classList.add("checked");

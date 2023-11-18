@@ -83,14 +83,16 @@
     </div>
     <script>
         const info = document.getElementById("info-button");
-        info.addEventListener("click", _ => info.classList.toggle("checked"))
+        info.addEventListener("click", _ => info.classList.toggle("checked"));
 
+        const autoInfoTriggerTimeOut = 25;
+        console.log(`set auto help trigger to ${autoInfoTriggerTimeOut}`);
         setTimeout(() => {
             if(!info.classList.contains("checked")){
                 info.classList.add("checked");
                 console.log('triggered help button');
             }
-        }, 25000);
+        }, autoInfoTriggerTimeOut * 1000);
     </script>
   </body>
 </html>
